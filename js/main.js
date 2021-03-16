@@ -4,13 +4,13 @@ const app = Vue.createApp({
             keyword: '',
             result: null,
             start: 0,
-            end: 20
+            max: 20
 
         }
     },
     methods: {
         searchGoogleBooks() {
-            fetch('https://www.googleapis.com/books/v1/volumes?&q=' + this.keyword + "&startIndex="+this.start+"&maxResults="+this.end)
+            fetch('https://www.googleapis.com/books/v1/volumes?&q=' + this.keyword + "&startIndex="+this.start+"&maxResults="+this.max)
                 .then(response => response.json())
                 .then(json => this.result = json)
         },
@@ -25,13 +25,23 @@ const app = Vue.createApp({
         },
         checkIfTooFarRight()
         {
-            if(this.end+ 20 >= this.result.totalItems)
+            if(this.start+ 40 >= this.result.totalItems)
             {
                 return false;
             }
             else{
                 return true;
             }
+        },
+        pageRight()
+        {
+            this.start=this.start +20;
+            this.searchGoogleBooks();
+        },
+        pageLeft()
+        {
+            this.start=this.start -20;
+            this.searchGoogleBooks();
         }
     }
 })

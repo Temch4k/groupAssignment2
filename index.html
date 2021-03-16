@@ -39,13 +39,12 @@
         <div id="mainDiv">
             <div v-if="result !=null">
                 <div class="row d-flex justify-content-center">found {{ (result !=null)?result.totalItems:''}} entrees</div>
-                <div class = "row d-flex justify-content-center">pages  {{Math.ceil(result.totalItems/20)}}</div>
 
                 <div class="row d flex justify-content-center">
-                    <a href="#" v-if="checkIfTooFarLeft()" class="col-sm-2 previous">Previous page</a>
-                    <a href="#" v-else disabled="disabled" class="col-sm-2 blocked">Previous page</a>
-                    <a href="#" v-if="checkIfTooFarRight()"class="col-sm-2 next">Next page</a>
-                    <a href="#" v-else disabled="disabled" class="col-sm-2 blocked">Next page</a>
+                    <button v-if="checkIfTooFarLeft()" v-on:click="pageLeft()" class="col-sm-2 previous">Previous page</a>
+                    <button v-else disabled="disabled" class="col-sm-2 blocked">Previous page</a>
+                    <button v-if="checkIfTooFarRight()"v-on:click="pageRight()" class="col-sm-2 next">Next page</a>
+                    <button v-else disabled="disabled" class="col-sm-2 blocked">Next page</a>
                 </div>
                 <br>
                 <div class="row">
