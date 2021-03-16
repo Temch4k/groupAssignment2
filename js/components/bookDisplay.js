@@ -12,6 +12,9 @@ app.component('book-display', {
         <div v-if="bookObj.volumeInfo.title != undefined">
             <a class="list-group-item list-group-item-action active" :href="this.bookObj.selfLink"> {{ this.bookObj.volumeInfo.title }}</a>
         </div>
+        <div  v-if="bookObj.volumeInfo.subtitle != undefined">
+            <li class="list-group-item"> Subtitle: {{ this.bookObj.volumeInfo.subtitle }}</li>
+        </div>
 
         <div v-if="this.bookObj.volumeInfo.imageLinks != undefined" class = "d-flex justify-content-center">
             <img :src="this.bookObj.volumeInfo.imageLinks.thumbnail" alt="thumbnail">
