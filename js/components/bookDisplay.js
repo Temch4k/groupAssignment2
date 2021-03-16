@@ -12,11 +12,12 @@ app.component('book-display', {
         <div v-if="bookObj.volumeInfo.title != undefined">
             <a class="list-group-item list-group-item-action active" :href="this.bookObj.selfLink"> {{ this.bookObj.volumeInfo.title }}</a>
         </div>
-        <div v-if="this.bookObj.volumeInfo.imageLinks != undefined">
+
+        <div v-if="this.bookObj.volumeInfo.imageLinks != undefined" class = "d-flex justify-content-center">
             <img :src="this.bookObj.volumeInfo.imageLinks.thumbnail" alt="thumbnail">
         </div>
-        <div v-else>
-            <img src="../nthumb.png" alt="thumbnailToo">
+        <div v-else class = "d-flex justify-content-center">
+            <img src="../nthumb.png" alt="thumbnailToo" >
         </div>
 
         <div v-if="bookObj.volumeInfo.authors != undefined">
@@ -30,6 +31,12 @@ app.component('book-display', {
         </div>
         <div  v-if="bookObj.volumeInfo.ratingsCount != undefined">
             <li class="list-group-item"> Rating: {{ this.bookObj.volumeInfo.ratingsCount }}</li>
+        </div>
+        <div  v-if="bookObj.volumeInfo.pageCount != undefined">
+            <li class="list-group-item"> Page Count: {{ this.bookObj.volumeInfo.pageCount }}</li>
+        </div>
+        <div  v-if="bookObj.volumeInfo.description != undefined">
+            <li class="list-group-item"> description: {{ this.bookObj.volumeInfo.description }}</li>
         </div>
     </ul>`,
     computed:{
