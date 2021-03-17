@@ -3,9 +3,10 @@
 
 <head>
     <title>Homework 3</title>
+    <meta charset="utf-8">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <script src="https://unpkg.com/vue@next"></script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -44,11 +45,11 @@
 
                 <div class="row d flex justify-content-center">
                     <button v-if="checkIfTooFarLeft()" v-on:click="pageLeft()" class="col-sm-2 previous">Previous
-                        page</a>
-                        <button v-else disabled="disabled" class="col-sm-2 blocked">Previous page</a>
+                        page</button>
+                        <button v-else disabled="disabled" class="col-sm-2 blocked">Previous page</button>
                             <button v-if="checkIfTooFarRight()" v-on:click="pageRight()" class="col-sm-2 next">Next
-                                page</a>
-                                <button v-else disabled="disabled" class="col-sm-2 blocked">Next page</a>
+                                page</button>
+                                <button v-else disabled="disabled" class="col-sm-2 blocked">Next page</button>
                 </div>
                 <br>
                 <div class="row">
@@ -56,7 +57,7 @@
                     </book-display>
                 </div>
             </div>
-            <div v-else>
+            <div>
                 <div class="row col-sm-6">
                     <h3>Please enter a value you'd like to search</h3>
                 </div>
