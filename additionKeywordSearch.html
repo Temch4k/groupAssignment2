@@ -32,7 +32,12 @@
                             onClick="window.location.href=window.location.href">Reset</button>
                     </div>
                     <div class="col-sm-5 col-lg-4 box" style="margin: auto;">
-                        <a href="/additionKeywordSearch.html" class="btn btn-info" role="button">Use Multiple Keywords</a>
+                        <div  id="hover" v-for="(keyword, n) in newSearch">
+                            <button type="button" class="form-group btn btn-outline-dark"
+                                @click="removeSearch(n)">x</button>
+                            <span class="keyword form-group">{{ keyword }}</span>
+                        </div>
+                        <div ><span v-on:click="displaySearch">Addition Keywords</span></div>
                     </div>
                 </div>
             </fieldset>
