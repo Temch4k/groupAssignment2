@@ -1,4 +1,5 @@
 # Group 2 Assignment Part 2
+ [Here is the link to our Google Books API page](https://temch4k.github.io/groupAssignment2/)
  
   -For this part of the assignment, we followed all of the directions given to us in Dr. Jafarian's presentations. Artsiom set up the Github repo with everyone in the group, borrowed the code from the VueJS classwork, and began the assignment. Artsiom implemented the pagintation while Dax and Artsiom worked together to create the template for each book. Micah did the Vue.js research required to complete the assignment and found a way to use multpile keywords in a search and implemented that function on an extra page. Dax also implemented the API calls such as subtitles, rating counts, page counts, and descriptions of each of the books. 
 
