@@ -8,7 +8,7 @@ function searchGoogleBooks(){
 
     document.querySelector("#mainDiv").classList.remove("hasError");
 
-    fetch('https://www.googleapis.com/books/v1/volumes?&q=' + txtSearch.value +"&startIndex=0&maxResults=27")
+    fetch('https://www.googleapis.com/books/v1/volumes?&q=' + txtSearch.value +"&startIndex=0&maxResults=20&key=AIzaSyAveODishCcgrLnEShVh6Bp2unmkdqcucI")
     .then(response => response.json())
     .then(json => {
         var list = `<div class="row col-sm-5>found ${json.totalItems} books </div>
