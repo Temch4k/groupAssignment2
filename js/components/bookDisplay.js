@@ -20,7 +20,7 @@ app.component('book-display', {
             <img :src="this.bookObj.volumeInfo.imageLinks.thumbnail" alt="thumbnail">
         </div>
         <div v-else class = "d-flex justify-content-center">
-            <img src="../nthumb.png" alt="thumbnailToo" >
+            <img src="nthumb.png" alt="thumbnailToo" >
         </div>
 
         <div v-if="bookObj.volumeInfo.authors != undefined">
